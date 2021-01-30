@@ -11,6 +11,6 @@ before_install:
 
 deploy:
   provider: heroku
-  api_token:
+  api_key:
     secure: $HEROKU_API_KEY
   app: mf-config-server-api
