@@ -1,0 +1,15 @@
+language: java
+jdk:
+  - oraclejdk11
+script:
+  - ./gradlew clean test
+  - ./gradlew build
+
+before_install:
+  - export TZ=Brazil/East
+
+deploy:
+  provider: heroku
+  api-key:
+    secure: $HEROKU_API_KEY
+  app: mf-config-server-api
